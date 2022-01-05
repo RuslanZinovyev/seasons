@@ -6,7 +6,6 @@ import Spinner from "./Spinner";
 class App extends React.Component {
   state = {
     latitude: null,
-    longitude: null,
     errorMessage: "",
   };
 
@@ -16,7 +15,6 @@ class App extends React.Component {
       (position) => {
         this.setState({
           latitude: position.coords.latitude,
-          longitude: position.coords.longitude,
         });
       },
       (err) => {
